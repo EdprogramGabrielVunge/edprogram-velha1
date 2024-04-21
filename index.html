@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Crazy.ico" />
+  <title>EdprogramVelha-1.1</title>
+  <style>
+
+  body{background-color:black;}
+  
+	.GV
+	{
+	background-color:blue;
+
+	width:144.5px; height:169px;
+
+	margin:auto; position:center;
+	
+	border:1px solid blue;
+	
+	border-radius:10px;
+	}
+	
+	
+	.pt{color:white}
+	
+	.Edprogram{ color:red; margin-right:5px}
+	.Play_Here{ color:pink; margin-right:20px}
+	
+	#box1_1_2_3
+	{
+	
+	color:red;
+	
+	
+	   padding:18px; 
+	   margin-bottom:5px;
+     	  
+	  border-top: 1px solid white;
+	  border-left: 1px solid white;
+	  border-bottom:1px solid white;
+	  border-right: 1px solid white;
+	  
+	  border-radius:8px;
+	}
+	
+	.um{ display:inline; }
+	
+	
+	.label{color:green}
+	
+	.cent{ text-align:center;}
+	
+	.dr{ float:right}
+  </style>
+</head>
+<body>
+  <!-- linha um ( 1 ) e colunas -->
+ <a class="Edprogram">Edprogram</a>
+ <a class="Play_Here">Play Here</a>
+<label class="label">EdprogramVelha</label>
+<br>
+<br>
+ <div class="GV">
+  
+           <button id="box1_1_2_3" class="um" onclick="mtd1()">  <a class="_1_1">_</a>  </button>
+		   
+		   <button id="box1_1_2_3" class="um" onclick="mtd2()">  <a class="_1_2">_</a> </button>
+		   
+		   <button id="box1_1_2_3" class="um"  onclick="mtd3()"> <a class="_1_3">_</a> </button>
+    
+  <!-- linha dois ( 2 ) e colunas -->
+  
+  <br>
+  
+      <button id="box1_1_2_3" class="um" onclick="mtd4()">  <a class="_2_1">_</a> </button>
+	  <button id="box1_1_2_3" class="um" onclick="mtd5()">  <a class="_2_2">_</a> </button>
+	  <button id="box1_1_2_3" class="um" onclick="mtd6()">  <a class="_2_3">_</a> </button>
+    
+   <!-- linha dois ( 23) e colunas -->
+   
+  <br>
+   
+       <button id="box1_1_2_3" class="um" onclick="mtd7()"> <a class="_3_1">_</a> </button>
+	   <button id="box1_1_2_3" class="um" onclick="mtd8()"> <a class="_3_2">_</a> </button>
+	   <button id="box1_1_2_3" class="um d" onclick="mtd9()"> <a class="_3_3">_</a> </button>
+    
+	</div>
+	<br>
+   <script>
+   
+   let EdprogramVelhaVez=0;
+   
+  
+ // Primeiro botão
+ 
+   function mtd1() 
+   {
+  var v=document.querySelector("._1_1").text; 
+   
+   if(EdprogramVelhaVez==0)
+   {  
+if(v=="_")
+{
+   document.querySelector("._1_1").textContent="0";
+   EdprogramVelhaVez++;
+   VerificaLinha1Horizontal();
+   VerificaLinha1Vertical();
+   Principal1();
+   
+   Empati();
+}  
+   }
+ 
+   else if(EdprogramVelhaVez==1)
+  {
+  
+if(v=="_")
+{
+   document.querySelector("._1_1").textContent="x"; 
+   EdprogramVelhaVez--;
+   VerificaLinha1Horizontal();
+   VerificaLinha1Vertical();
+   Principal1();
+
+	Empati();
+}   
+   }
+   
+   }
+ 
+
+
+ 
+// Segundo botão
+   
+   function mtd2() 
+   {
+   var v=document.querySelector("._1_2").text;
+   
+   if(EdprogramVelhaVez==0)
+   {
+   
+if(v=="_")
+{
+   document.querySelector("._1_2").textContent="0";
+   EdprogramVelhaVez++;
+   VerificaLinha1Horizontal();
+   VerificaLinha2Vertical();
+   
+   Empati();
+}  
+   }
+   
+   else if(EdprogramVelhaVez==1)
+  { 
+if(v=="_")
+{
+   document.querySelector("._1_2").textContent="x"; 
+   EdprogramVelhaVez--;
+   
+   VerificaLinha1Horizontal();
+   VerificaLinha2Vertical();
+   
+   Empati();
+}   
+   }
+   
+   }
+   
+ 
+ 
+ 
+ 
+// terceiro botão
+
+  function mtd3() 
+   {
+   var v=document.querySelector("._1_3").text;
+   
+   if(EdprogramVelhaVez==0)
+   {      
+if(v=="_")
+{
+   document.querySelector("._1_3").textContent="0";
+   EdprogramVelhaVez++;
+   VerificaLinha1Horizontal();
+   VerificaLinha3Vertical();
+   Principal2();
+   
+   Empati();
+}  
+   }
+   
+   else if(EdprogramVelhaVez==1)
+  { 
+if(v=="_")
+{
+   document.querySelector("._1_3").textContent="x"; 
+   EdprogramVelhaVez--;
+   VerificaLinha3Horizontal();
+   VerificaLinha2Vertical();
+   Principal2();
+   
+   Empati();
+}   
+   }
+   
+   }
+  
+// fim da primeira Linha Edprogram-School
+
+
+
+
+
+/* Segundo Linha Edprogram-School
+
+primeiro botão
+
+*/
+
+  function mtd4() 
+   {
+	var v=document.querySelector("._2_1").text;
+	
+   if(EdprogramVelhaVez==0)
+   {
+   
+if(v=="_")
+{
+   document.querySelector("._2_1").textContent="0";
+   EdprogramVelhaVez++;
+
+   VerificaLinha2Horizontal();
+   VerificaLinha1Vertical();
+   
+   Empati();
+}  
+   }
+   
+   else if(EdprogramVelhaVez==1)
+  { 
+if(v=="_")
+{
+   document.querySelector("._2_1").textContent="x"; 
+   EdprogramVelhaVez--;
+
+   VerificaLinha2Horizontal();
+   VerificaLinha1Vertical();
+   
+   Empati();
+}   
+   }
+   
+   }
+    
+	
+// Segundo botão
+
+  function mtd5() 
+   {
+   var v=document.querySelector("._2_2").text;
+   
+   if(EdprogramVelhaVez==0)
+   {
+   
+if(v=="_")
+{
+   document.querySelector("._2_2").textContent="0";
+   EdprogramVelhaVez++;
+
+   VerificaLinha2Horizontal();
+   VerificaLinha2Vertical();  
+   
+   Empati();
+}
+
+	}
+	
+   else if(EdprogramVelhaVez==1)
+  { 
+if(v=="_")
+{
+   document.querySelector("._2_2").textContent="x"; 
+   EdprogramVelhaVez--;
+
+   
+   VerificaLinha2Horizontal();
+   VerificaLinha2Vertical();
+   
+   Empati();
+}   
+   }
+   
+   }
+ 
+// terceiro botão
+
+  function mtd6() 
+   {
+   var v=document.querySelector("._2_3").text;
+   
+   if(EdprogramVelhaVez==0)
+   {
+   
+if(v=="_")
+{
+   document.querySelector("._2_3").textContent="0";
+   EdprogramVelhaVez++;
+   
+   VerificaLinha2Horizontal();
+   VerificaLinha3Vertical();
+   
+   Empati();
+}  
+   }
+   
+   else if(EdprogramVelhaVez==1)
+  { 
+if(v=="_")
+{
+   document.querySelector("._2_3").textContent="x"; 
+   EdprogramVelhaVez--;
+
+   VerificaLinha2Horizontal();
+   VerificaLinha3Vertical();
+   
+   Empati();
+}   
+   }
+   
+   }
+ 
+ 
+// Fim da segunda Linha Edprogram-School
+
+
+/*
+   Inicio da Quarta Linha Edprogram-School
+   
+   primeiro botão        */
+   
+   
+     function mtd7() 
+     {
+   var v=document.querySelector("._3_1").text;
+   
+   if(EdprogramVelhaVez==0)
+   {
+   
+if(v=="_")
+{
+   document.querySelector("._3_1").textContent="0";
+   EdprogramVelhaVez++;
+
+   VerificaLinha3Horizontal();
+   VerificaLinha1Vertical();
+   Principal2();
+   
+   Empati();
+}  
+   }
+   
+   else if(EdprogramVelhaVez==1)
+  { 
+if(v=="_")
+{
+   document.querySelector("._3_1").textContent="x"; 
+   EdprogramVelhaVez--;
+
+   VerificaLinha3Horizontal();
+   VerificaLinha1Vertical();
+   Principal2();
+   
+   Empati();
+}   
+   }
+   
+   }
+ 
+
+// Segundo botão
+
+  function mtd8() 
+   {
+   var v=document.querySelector("._3_2").text;
+   
+   if(EdprogramVelhaVez==0)
+   {
+   
+if(v=="_")
+{
+   document.querySelector("._3_2").textContent="0";
+   EdprogramVelhaVez++;
+
+   VerificaLinha3Horizontal();
+   VerificaLinha2Vertical();
+   
+   Empati();
+}  
+   }
+   
+   else if(EdprogramVelhaVez==1)
+  { 
+if(v=="_")
+{
+   document.querySelector("._3_2").textContent="x"; 
+   EdprogramVelhaVez--;
+   VerificaLinha3Horizontal();
+   VerificaLinha2Vertical();
+   
+   Empati();
+}   
+   }
+   
+   }
+ 
+ 
+// Terceiro botão
+
+  function mtd9() 
+   {
+   var v=document.querySelector("._3_3").text;
+   
+   if(EdprogramVelhaVez==0)
+   {
+   
+if(v=="_")
+{
+   document.querySelector("._3_3").textContent="0";
+   EdprogramVelhaVez++;
+
+   VerificaLinha3Horizontal();
+   VerificaLinha3Vertical();
+   Principal1();
+   
+   Empati();
+}  
+   }
+   
+   else if(EdprogramVelhaVez==1)
+  { 
+if(v=="_")
+{
+   document.querySelector("._3_3").textContent="x"; 
+   EdprogramVelhaVez--;
+   
+   VerificaLinha3Horizontal();
+   VerificaLinha3Vertical();
+   Principal1();
+   
+   Empati();
+}   
+   }
+  
+   }
+ 
+  </script>
+  
+  
+  
+  
+  <!-- Script para verificar vensedoor -->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- //############################################################################################################################################ -->  
+  
+  <script>
+ 
+ 
+// verificacando a linha um ( 1 )
+ 
+   function VerificaLinha1Horizontal()
+  {  
+  
+  if(document.querySelector("._1_1").text=="x" && document.querySelector("._1_2").text=="x" && document.querySelector("._1_3").text=="x")
+  {  	
+	
+	jogador2();
+	
+  }
+  
+  
+  else if(document.querySelector("._1_1").text=="0" && document.querySelector("._1_2").text=="0" && document.querySelector("._1_3").text=="0")
+  {  
+  jogador1();
+  }
+  
+  }
+   
+  
+
+
+  
+// verificacando a linha dois ( 2 )
+   
+   
+   function VerificaLinha2Horizontal()
+  {  
+	
+  if(document.querySelector("._2_1").text=="x" && document.querySelector("._2_2").text=="x" && document.querySelector("._2_3").text=="x")
+  {
+	jogador2();
+  }
+  
+  
+  else if(document.querySelector("._2_1").text=="0" && document.querySelector("._2_2").text=="0" && document.querySelector("._2_3").text=="0")
+  { 
+	jogador1();
+  }
+  
+  
+  }
+
+  
+  
+  
+  
+// Verificando a linha três ( 3 ) 
+ 
+  function VerificaLinha3Horizontal()
+  {  
+	
+  if(document.querySelector("._3_3").text=="x" && document.querySelector("._3_2").text=="x" && document.querySelector("._3_1").text=="x")
+  { 
+	jogador2();
+  }
+  
+  
+  else if(document.querySelector("._3_3").text=="0" && document.querySelector("._3_2").text=="0" && document.querySelector("._3_1").text=="0")
+  {   
+	jogador1();
+  }
+  
+  
+  
+  }
+  
+ </script>
+  <!-- //############################################################################################################################################ -->  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <!-- //############################################################################################################################################ -->
+  <script>
+  
+  //  Verificando a coluna 1
+  
+  function VerificaLinha1Vertical()
+  {  
+	
+  if(document.querySelector("._1_1").text=="x" && document.querySelector("._2_1").text=="x" && document.querySelector("._3_1").text=="x")
+  { 
+	jogador2();
+  }
+  
+  
+  else if(document.querySelector("._1_1").text=="0" && document.querySelector("._2_1").text=="0" && document.querySelector("._3_1").text=="0")
+  {  
+	jogador1();
+  }
+
+
+ 
+  }
+  
+  
+  //  Verificando a coluna 2
+  
+  function VerificaLinha2Vertical()
+  {  
+  
+  if(document.querySelector("._1_2").text=="x" && document.querySelector("._2_2").text=="x" && document.querySelector("._3_2").text=="x")
+  { 
+	jogador2();
+  }
+  
+  
+  else if(document.querySelector("._1_2").text=="0" && document.querySelector("._2_2").text=="0" && document.querySelector("._3_2").text=="0")
+  { 
+	jogador1();
+  }
+  
+
+  
+  }
+ 
+ 
+  //  Verificando a coluna 3
+  
+  function VerificaLinha3Vertical()
+  {  
+  
+  if(document.querySelector("._1_3").text=="x" && document.querySelector("._2_3").text=="x" && document.querySelector("._3_3").text=="x")
+  {  
+	jogador2();
+  }
+  
+  
+  else if(document.querySelector("._1_3").text=="0" && document.querySelector("._2_3").text=="0" && document.querySelector("._3_3").text=="0")
+  { 
+	jogador1();   
+  }
+  
+
+  
+  }
+ 
+  </script>
+  
+  <!-- //############################################################################################################################################ -->
+  
+  
+  
+  
+  
+  <!-- //############################################################################################################################################ -->
+  
+  <script>
+  
+  // Verificando a principal 1
+  
+  function Principal1()
+  {  
+  
+  if(document.querySelector("._1_1").text=="x" && document.querySelector("._2_2").text=="x" && document.querySelector("._3_3").text=="x")
+  {
+	jogador2();  
+  }
+  
+  
+  else if(document.querySelector("._1_1").text=="0" && document.querySelector("._2_2").text=="0" && document.querySelector("._3_3").text=="0")
+  {
+	jogador1();
+  }
+  
+
+  
+  }
+  
+  //  Verificando a Principal 2
+  
+  function Principal2()
+  {  
+  
+  if(document.querySelector("._1_3").text=="x" && document.querySelector("._2_2").text=="x" && document.querySelector("._3_1").text=="x")
+  {
+	jogador2();  
+  }
+  
+  
+  else if(document.querySelector("._1_3").text=="0" && document.querySelector("._2_2").text=="0" && document.querySelector("._3_1").text=="0")
+  {
+	jogador1();
+  	
+  }
+  
+
+  
+  }
+  </script>
+  <!-- »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»» -->
+
+  
+  
+  
+  
+  
+  <!-- //############################################################################################################################################ -->  
+ <script>
+  
+  function EdprogramLimpeza()
+  {
+  document.querySelector("._1_1").textContent="_";
+  document.querySelector("._1_2").textContent="_";
+  document.querySelector("._1_3").textContent="_";
+  
+  document.querySelector("._2_1").textContent="_";
+  document.querySelector("._2_2").textContent="_";
+  document.querySelector("._2_3").textContent="_";
+  
+  document.querySelector("._3_1").textContent="_";
+  document.querySelector("._3_2").textContent="_";
+  document.querySelector("._3_3").textContent="_";
+   
+  }
+  </script>
+  <!-- //############################################################################################################################################ -->  
+  
+  
+  
+  <script>
+  
+  let valor1=0;
+  let valor2=0;
+  
+  function adicionando_valor_de_pontuação_do_Edprogram_0()
+  {
+  
+     valor1=valor1+1;
+     document.querySelector(".ponto1").textContent=valor1;
+  
+  }
+  
+  
+  function adicionando_valor_de_pontuação_do_Edprogram_x()
+  {     
+     valor2=valor2+1;
+     document.querySelector(".ponto2").textContent=valor2;
+	
+  }
+  
+  </script>
+  
+  
+  
+  
+  <!-- Difinindo o vencedor -->
+  
+  <script language="javascript" name="Quem_Ganhou?">
+  
+  function Empati()
+  {
+  
+      if( (document.querySelector("._1_1").text!="_") && (document.querySelector("._1_2").text!="_") && (document.querySelector("._1_3").text!="_") && (document.querySelector("._2_1").text!="_") && (document.querySelector("._2_2").text!="_") && (document.querySelector("._2_3").text!="_") && (document.querySelector("._3_1").text!="_") && (document.querySelector("._3_2").text!="_") && (document.querySelector("._3_3").text!="_") )
+	  {
+	    setTimeout(()=>{ 
+	    alert("Empati. Não há perdedor nem Vencedor");
+	    EdprogramLimpeza();
+		}, 300);
+	  }
+  }
+  
+  
+	function jogador1()
+	{
+	 setTimeout(()=>{
+	alert("Fim do Jogo\nJogador 1 venceu a partida");
+	adicionando_valor_de_pontuação_do_Edprogram_0();
+	EdprogramLimpeza();
+	 },300);
+	}
+  
+  
+	function jogador2()
+	{
+	 setTimeout(()=>{
+	alert("Fim do Jogo\nJogador 2 venceu a partida");
+	adicionando_valor_de_pontuação_do_Edprogram_x();
+	 EdprogramLimpeza();
+	 },300);
+	 
+	 
+	}
+  </script>
+  
+  <!-- fim da definição do Vencedor -->
+  
+  
+  
+  
+  
+  <br><hr> <p class="pt cent"> Pontuação<p> <hr>
+  <p class="pt"><strong class="nm"> Jogador 1 ( 0 ) : </strong> <a class="ponto1 pt">0</a></p>
+  <p class="pt"><strong class="nmm"> Jogador 2 ( x ) : </strong> <a class="ponto2 pt">0 </a></p>
+  <br>
+  <br>
+  <p class="pt">Edprogram-School
+  <br>Edprogram.GV la family</p>
+  
+  
+  <p class="pt">Contactos: vungegabriel8@gmail.com/ 924 92 35 85  <a class="dr"> ( FB ) Edmilson Ndelevunge</a></p>
+  <p class="pt cent"><br>Edmilson Gabriel Vunge<br>Simione Mucune1 && Golf2/Catinton<br> é <br><STRONG> A BANDA</STRONG></p>
+  </body>
+</html>
